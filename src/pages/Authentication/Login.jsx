@@ -1,6 +1,11 @@
 import { Button, TextField } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/dashboard");
+  };
   return (
     <div className="bg-white m-20 p-5 w-4/12">
       <h1 className="text-4xl text-black text-center mb-12">Welcome Back</h1>
@@ -20,7 +25,9 @@ const Login = () => {
             fullWidth
             margin="dense"
           />
-          <Button variant="outlined">Sign In</Button>
+          <Button variant="outlined" onClick={handleLogin}>
+            Sign In
+          </Button>
         </fieldset>
       </form>
     </div>
