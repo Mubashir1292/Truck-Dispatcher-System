@@ -1,10 +1,12 @@
 import PdfViewer from "../PDFViewer/PDFViewer";
-import document from "./sampleTesting3.pdf";
 const ViewDocument = () => {
+  const handleSubmit = (data) => {
+    console.log(data);
+  };
   return (
     <div className="w-full min-h-screen p-3">
       <div className=" h-screen">
-        <PdfViewer fileUrl={document} />
+        <PdfViewer pdfFile={"./sampleTesting3.pdf"} onSubmit={handleSubmit} />
       </div>
     </div>
   );

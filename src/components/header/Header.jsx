@@ -6,7 +6,7 @@ const Header = () => {
   const [openMenu, setOpenMenu] = React.useState(false);
   const links = [
     {
-      path: "/document",
+      path: "/",
       label: "Document",
     },
     {
